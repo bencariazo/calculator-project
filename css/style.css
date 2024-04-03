@@ -80,3 +80,12 @@ body {
     width: 400px;
 }
 
+#calculator-display {
+    height: 150px;
+}
+
+#calculator-buttons {
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
