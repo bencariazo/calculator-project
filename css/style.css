@@ -46,6 +46,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: larger;
+    font-style: normal;
+    color: #DDDDDD;
+}
 
 #main {
     display: flex;
