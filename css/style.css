@@ -82,6 +82,11 @@ body {
 }
 
 #calculator-display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-end;
+    padding-bottom: 20px;
+    padding-right: 20px;
     height: 150px;
 }
 
