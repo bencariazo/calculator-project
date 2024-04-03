@@ -89,3 +89,14 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 calc(100%/4);
+}
+
+#equal {
+    flex: 1;
+}
