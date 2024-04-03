@@ -73,3 +73,10 @@ body {
     align-items: center;
 }
 
+#calculator-display, 
+#calculator-buttons {
+    border: 5px solid #DDDDDD;
+    border-radius: 20px;
+    width: 400px;
+}
+
