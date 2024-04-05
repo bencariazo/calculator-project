@@ -6,3 +6,9 @@ const allBtnNumber = document.querySelectorAll('.btn-number')
 const allBtnOperations = document.querySelectorAll('.btn-operations')
 const allBtnFunctions = document.querySelectorAll('.btn-function')
 
+
+const add = (x,y) => x + y;
+const subtract = (x,y) => x - y;
+const multiply = (x,y) => x * y;
+const divide = (x,y) => x / y;
+
