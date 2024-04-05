@@ -6,6 +6,9 @@ const allBtnNumber = document.querySelectorAll('.btn-number')
 const allBtnOperations = document.querySelectorAll('.btn-operations')
 const allBtnFunctions = document.querySelectorAll('.btn-function')
 
+let previousNum = 0;
+let operator = '';
+let currentNum = 0;
 
 const add = (x,y) => x + y;
 const subtract = (x,y) => x - y;
