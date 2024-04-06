@@ -63,6 +63,16 @@ const clear = () => {
     previousNum = '';
 }
 
+const evaluate = () => {
+    if (operator === null || noDisplay) return
+    if (operator === '%' && calcDisplay.textContent === '0') {
+      alert("You can't divide by 0!")
+      return
+    }
+    currentNum = calcDisplay.textContent
+    calcDisplay.textContent = roundResult(operate(previousNum, operator, currentNum))
+    operator = null
+}
 
 const roundResult = (x) => Math.round(x * 1000) / 1000
 const add = (x,y) => x + y;
