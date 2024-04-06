@@ -80,3 +80,21 @@ const subtract = (x,y) => x - y;
 const multiply = (x,y) => x * y;
 const divide = (x,y) => x / y;
 const percentage = (x,y) => x * (y/100)
+
+const operate = (x,operator,y) => {
+    x = Number(x);
+    y = Number(y);
+    switch (operator) {
+            case "+":
+                return add(x,y)
+            case "-":
+                return subtract(x.y)
+            case "X":
+                return multiply(x,y)
+            case "/":
+                return divide(x,y)
+            case "%":
+                return percentage(x,y)
+        }
+}
+
