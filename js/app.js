@@ -20,6 +20,18 @@ allClear.addEventListener('click', () => clear())
 positiveNegativeBtn.addEventListener('click', positiveNegative)
 
 
+const inputNum = (num) => {
+    if(calcDisplay.textContent == '0' || noDisplay) {
+        removeDisplay()
+    }
+    calcDisplay.textContent += num
+}
+
+const removeDisplay = () => {
+    calcDisplay.textContent = '';
+    noDisplay = false;
+}
+
 const add = (x,y) => x + y;
 const subtract = (x,y) => x - y;
 const multiply = (x,y) => x * y;
