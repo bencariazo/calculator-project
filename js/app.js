@@ -32,6 +32,12 @@ const removeDisplay = () => {
     noDisplay = false;
 }
 
+const getOperator = (para) => {
+    if(operator !== null) evaluate()
+    previousNum = calcDisplay.textContent
+    operator = para
+    noDisplay = true;
+}
 
 function addDecimal () {
     if (noDisplay) removeDisplay()
