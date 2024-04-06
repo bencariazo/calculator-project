@@ -13,6 +13,13 @@ let operator = null;
 let currentNum = 0;
 let noDisplay = false;
 
+allBtnNumber.forEach(btn => btn.addEventListener('click', () => inputNum(btn.textContent)))
+allBtnOperations.forEach(btn => btn.addEventListener('click', () => getOperator(btn.textContent)))
+decimalBtn.addEventListener('click', addDecimal)
+allClear.addEventListener('click', () => clear())
+positiveNegativeBtn.addEventListener('click', positiveNegative)
+
+
 const add = (x,y) => x + y;
 const subtract = (x,y) => x - y;
 const multiply = (x,y) => x * y;
