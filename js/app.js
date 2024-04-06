@@ -56,6 +56,13 @@ function positiveNegative () {
     }
 }
 
+const clear = () => {
+    calcDisplay.textContent = '0';
+    operator = null;
+    currentNum = '';
+    previousNum = '';
+}
+
 
 const roundResult = (x) => Math.round(x * 1000) / 1000
 const add = (x,y) => x + y;
