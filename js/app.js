@@ -16,26 +16,29 @@ let noDisplay = false;
 allBtnNumber.forEach(btn => btn.addEventListener('click', () => inputNum(btn.textContent)))
 allBtnOperations.forEach(btn => btn.addEventListener('click', () => getOperator(btn.textContent)))
 decimalBtn.addEventListener('click', addDecimal)
-allClear.addEventListener('click', () => clear())
+allClear.addEventListener('click', clear)
 positiveNegativeBtn.addEventListener('click', positiveNegative)
 
 
-const inputNum = (num) => {
+function inputNum (num) {
     if(calcDisplay.textContent == '0' || noDisplay) {
         removeDisplay()
     }
     calcDisplay.textContent += num
 }
 
-const removeDisplay = () => {
+function removeDisplay () {
     calcDisplay.textContent = '';
     noDisplay = false;
 }
 
-const getOperator = (para) => {
-    if(operator !== null) evaluate()
+function getOperator (para) {
+    if(operator !== null) {
+        evaluate()
+    }
     previousNum = calcDisplay.textContent
     operator = para
+    // console.log(operator)
     noDisplay = true;
 }
 
@@ -56,16 +59,16 @@ function positiveNegative () {
     }
 }
 
-const clear = () => {
+function clear () {
     calcDisplay.textContent = '0';
     operator = null;
     currentNum = '';
     previousNum = '';
 }
 
-const evaluate = () => {
+function evaluate () {
     if (operator === null || noDisplay) return
-    if (operator === '%' && calcDisplay.textContent === '0') {
+    if (operator === '/' && calcDisplay.textContent === '0') {
       alert("You can't divide by 0!")
       return
     }
@@ -81,14 +84,14 @@ const multiply = (x,y) => x * y;
 const divide = (x,y) => x / y;
 const percentage = (x,y) => x * (y/100)
 
-const operate = (x,operator,y) => {
+function operate (x,operator,y) {
     x = Number(x);
     y = Number(y);
     switch (operator) {
             case "+":
                 return add(x,y)
             case "-":
-                return subtract(x.y)
+                return subtract(x,y)
             case "X":
                 return multiply(x,y)
             case "/":
