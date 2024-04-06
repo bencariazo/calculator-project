@@ -98,3 +98,4 @@ const operate = (x,operator,y) => {
         }
 }
 
+clear()
