@@ -5,10 +5,13 @@ const allBtn = document.querySelectorAll('.buttons')
 const allBtnNumber = document.querySelectorAll('.btn-number')
 const allBtnOperations = document.querySelectorAll('.btn-operations')
 const allBtnFunctions = document.querySelectorAll('.btn-function')
+const decimalBtn = document.querySelector('#period')
+const positiveNegativeBtn = document.querySelector('#positiveNegative')
 
 let previousNum = 0;
-let operator = '';
+let operator = null;
 let currentNum = 0;
+let noDisplay = false;
 
 const add = (x,y) => x + y;
 const subtract = (x,y) => x - y;
