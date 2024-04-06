@@ -32,6 +32,24 @@ const removeDisplay = () => {
     noDisplay = false;
 }
 
+
+function addDecimal () {
+    if (noDisplay) removeDisplay()
+    if (calcDisplay.textContent === ''){
+        calcDisplay.textContent = '0'
+    }
+    if (calcDisplay.textContent.includes('.')) {
+        return
+    }
+    calcDisplay.textContent += '.'
+}
+
+function positiveNegative () {
+    if (calcDisplay.textContent !== '' || calcDisplay.textContent !== 0) {
+        calcDisplay.textContent *= -1
+    }
+}
+
 const add = (x,y) => x + y;
 const subtract = (x,y) => x - y;
 const multiply = (x,y) => x * y;
