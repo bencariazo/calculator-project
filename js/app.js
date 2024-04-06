@@ -56,18 +56,10 @@ function positiveNegative () {
     }
 }
 
+
+const roundResult = (x) => Math.round(x * 1000) / 1000
 const add = (x,y) => x + y;
 const subtract = (x,y) => x - y;
 const multiply = (x,y) => x * y;
 const divide = (x,y) => x / y;
-
-const removeChild = () => {
-    while(calcDisplay.hasChildNodes()){
-        calcDisplay.removeChild(calcDisplay.firstChild)
-    }
-}
-allClear.addEventListener('click', () => {
-    currentNum = '';
-    previousNum = '';
-    removeChild();
-})
+const percentage = (x,y) => x * (y/100)
